@@ -6,7 +6,7 @@
         <style>
             #image {
 /*                background-color: blue;*/
-                background-image:url("pic1.jpg");
+                background-image:url("./images/pic1.jpg");
                 background-size: 100% auto;
                 background-repeat: no-repeat;
                 transition: 1.5s;
@@ -101,7 +101,7 @@
             <button style = "background-color: transparent; border-width: 2px; border-radius: 10px; border:none" onclick="nextScene();decrement()" id="2"></button>
             <button style = "background-color: transparent; border-width: 2px; border-radius: 10px;border:none" onclick="nextScene();decrement()" id="3"></button>
                 
-            <button style = "background-color: transparent; border-width: 2px; border-radius: 10px;border:none size:10px 10px; visibility:hidden" onclick="nextScene()"  id="4"><img src="arrow.png" alt="Continue"></button>
+            <button style = "background-color: transparent; border-width: 2px; border-radius: 10px;border:none size:10px 10px; visibility:hidden" onclick="nextScene()"  id="4"><img src="./images/arrow.png" alt="Continue"></button>
             
                 
                 
@@ -188,23 +188,23 @@
             var questioncount = 0;
             
             var scenarios = [{
-                background : "pic3bubble.jpg", 
+                background : "./images/pic3bubble.jpg", 
                 question : "As you leave, the doorman comments on the bags you're carrying. 'Are you sure you can carry that? It looks too heavy for a girl like you.'", 
                 answer1 : "You smile and nod and let him carry it", 
                 answer2 : "You say, 'No, I can handle this myself'", 
                 answer3 : "You ignore him and leave", 
                 transitionResponse : "This is an example of gender stereotyping. Gender stereotyes are pervasive in today's society. Common stereotypes about women include the assumption that they are weak and incompetent.", 
-                audio : "happyChances.mp3" }, 
-            {background : "pic4bubble.jpg", question : "You're walking to work now, and a guy on the street says to you 'Damn, you look fine girl. Smile for me!'", answer1 : "You smile", answer2 : "You say, 'This is considered harassment, and you need to leave me alone.'", answer3 : "You ignore him", transitionResponse : "Over 99% of American women have been a victim of street harrasment such as honking, whistling, kissing noises, staring, etc.", audio : "trafficJam.mp3" }, 
-            {background : "pic5bubble.jpg", question : "You've arrived at work, and you're currently in a meeting. You keep getting interrupted by your male coworker while you're speaking", answer1 : "You allow the coworker to keep interupting", answer2 : "You say, 'Excuse me, can you let me finish my sentence?'", answer3 : "You decide to just let the coworker speak for you", transitionResponse : "Women’s perceived competency drops by 35 percent and their perceived deserved compensation by $15,088 when they are assertive or forceful.", audio : "officeSounds.mp3" },
-            {background: "pic6.jpg", question : "It's finally the end of the day, and you're at the bar with friends. While you're partying, a guy grabs a random woman's waist from the back. She tells him to stop, but he doesn't listen.", answer1 : "You cheer her on", answer2 : "You tell him to back off because 'Yes means yes, and no means no'.", answer3 : "You pretend you never saw", transitionResponse : "Nearly 57 percent of women reported being touched or grabbed in a sexual way by a stranger in public", audio: "busyBar.mp3" }];
+                audio : "./sounds/happyChances.mp3" }, 
+            {background : "./images/pic4bubble.jpg", question : "You're walking to work now, and a guy on the street says to you 'Damn, you look fine girl. Smile for me!'", answer1 : "You smile", answer2 : "You say, 'This is considered harassment, and you need to leave me alone.'", answer3 : "You ignore him", transitionResponse : "Over 99% of American women have been a victim of street harrasment such as honking, whistling, kissing noises, staring, etc.", audio : "./sounds/trafficJam.mp3" }, 
+            {background : "./images/pic5bubble.jpg", question : "You've arrived at work, and you're currently in a meeting. You keep getting interrupted by your male coworker while you're speaking", answer1 : "You allow the coworker to keep interupting", answer2 : "You say, 'Excuse me, can you let me finish my sentence?'", answer3 : "You decide to just let the coworker speak for you", transitionResponse : "Women’s perceived competency drops by 35 percent and their perceived deserved compensation by $15,088 when they are assertive or forceful.", audio : "./sounds/officeSounds.mp3" },
+            {background: "./images/pic6.jpg", question : "It's finally the end of the day, and you're at the bar with friends. While you're partying, a guy grabs a random woman's waist from the back. She tells him to stop, but he doesn't listen.", answer1 : "You cheer her on", answer2 : "You tell him to back off because 'Yes means yes, and no means no'.", answer3 : "You pretend you never saw", transitionResponse : "Nearly 57 percent of women reported being touched or grabbed in a sexual way by a stranger in public", audio: "./sounds/busyBar.mp3" }];
      
             
         
 //            var audio = new Audio('metro.mp3');
             var audio = document.createElement('audio');
             audio.id = "audio";
-            audio.src = 'alarm.mp3';
+            audio.src = './sounds/alarm.mp3';
             audio.play();
             
             var vol = 0;
@@ -243,9 +243,9 @@
                 
                     if(timerCheck === 0){
                     
-                        audio.src = 'happyChances.mp3';
+                        audio.src = './sounds/happyChances.mp3';
                         audio.play();
-                        document.body.style.backgroundImage = "url('pic2.jpg')";
+                        document.body.style.backgroundImage = "url('./images/pic2.jpg')";
                         timerCheck = timerCheck+1;
                     
                     } 
@@ -254,7 +254,7 @@
                         
                         
                         audio.play();
-                        document.body.style.backgroundImage = "url('pic3bubble.jpg')";
+                        document.body.style.backgroundImage = "url('./images/pic3bubble.jpg')";
                         timerCheck = timerCheck+1;
                         nextScene();
                     }
