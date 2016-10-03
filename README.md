@@ -20,7 +20,7 @@ This site also contains information about sexual assault and/or violence which m
 : Node package manager
 - installed as part of node
 
-    $ npm install --dev
+    $ npm install
 
 # To-do
 - [x] script
